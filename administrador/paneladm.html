@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>PANEL ADMINISTRADOR</title>
+   <link rel="icon" href="IMG/favicon.png" type="image/png">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <header class="header">
+
+      <section class="flex">
+
+         <img src="IMG/img2.jpg.png" alt="Logo" class="img2">
+
+         <!-- MENU -->
+         <nav class="navbar">
+            <span id="close-menu" class="fas fa-times"></span>
+            <a href="paneladm.html">INICIO</a>
+            <a href="productosadm.php">PRODUCTOS</a>
+            <a href="pedidosadm.php">PEDIDOS</a>
+         </nav>
+
+         <!-- ICONOS -->
+         <div class="icons">
+
+            <!-- Botón menú -->
+            <div id="menu-btn" class="fas fa-bars"></div>
+
+         </div>
+      </section>
+   </header>
+
+
+   <section class="dashboard">
+
+      <h1 class="heading">PANEL ADMINISTRATIVO</h1>
+
+      <div class="box-container">
+
+         <div class="box">
+            <h3>BIENVENIDO</h3>
+            <a href="../cliente/Iniciarsesioncli.html" class="btn">ACTUALIZAR PERFIL</a>
+         </div>
+
+         <div class="box">
+            <p>Pendientes</p>
+            <a href="pedidosadm.php" class="btn">PEDIDOS</a>
+         </div>
+
+         <div class="box">
+            <p>Productos añadidos</p>
+            <a href="productosadm.php" class="btn">PRODUCTOS</a>
+         </div>
+
+      </div>
+   </section>
+   <script src="adm.js"></script>
+</body>
+</html>

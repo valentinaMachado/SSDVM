@@ -1,0 +1,641 @@
+/*fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/*tipo de letra*/
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+ 
+.tituloprincipal{
+    text-align: center;
+    color: #f41818;
+    background-color: #1f1e1d;
+}
+
+/*encabezado de la navegacion*/
+header{
+    position: fixed;
+    width: 100%; 
+    z-index: 5;
+    background: #1f1e1d;
+}
+
+
+/*barra de navegacion*/
+header .barradenavegacion{
+    display:flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+/*menu de navegacion*/
+.barradenavegacion .menudenavegacion{
+    display:flex;
+    gap:10px;
+}
+
+body.show-mobile-menu .barradenavegacion .menudenavegacion{
+    left:0;
+}
+
+/*redes sociales*/
+.infogeneral .redesocial{
+    display: flex;
+    gap:25px;
+    margin-left: 65%;
+    padding: 50px;
+}
+
+/*color de los iconos redes sociales*/
+.infogeneral .redesocial .linkredsocial{
+    color: #ff2929;
+    font-size: 30px;
+    transition: 0.2s ease;
+}
+
+.infogeneral .redesocial .linkredsocial:hover{
+    color: #ff9e00;
+}
+
+/*logo*/
+.barradenavegacion .logo .img16{
+ width: 60px;
+ height: 60px;
+}
+
+/*letra de navegacion*/
+.barradenavegacion .menudenavegacion .linknav{
+    color: #242424;
+    padding: 10px 18px;
+    background: #ff9e00;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+/*sombreado al pasar el maus*/
+.barradenavegacion .menudenavegacion .linknav:hover{
+    background: #ff9e00;
+    color: #ffff;
+}
+
+.barradenavegacion :where(#menu-close-button, #menu-open-button){
+    display: none;
+}
+
+
+/*listas de la navegacion*/
+ul{
+    list-style: none;
+
+}
+
+/*listas sin linea por debajo*/
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffff;
+}
+
+/*boton de las lista de navegación*/
+button{
+    cursor:pointer; 
+    border:none;
+    background-color: none;
+}
+
+/*descripcion*/
+.infogeneral{
+    background-image: url("IMG/img18.jpg.png");
+    min-height: 100vh;
+}
+
+/*descripcion precio*/
+.infogeneral .contenidoinfo{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content:space-between;
+
+}
+
+/*titulo 1 de la descripción*/
+.infogeneral .detallesinfo .titulo1{
+    font-size: 60px;
+    color: #ff9e00;
+    font-family: "Miniver", sans-serif;
+    margin: 23px;
+    margin-left: 250px;
+    margin-top: 15%;
+}
+
+/*titulo max span*/
+.titulo1 span{
+    color: #ff2929;
+    font-size: 60px;
+    font-family: "Miniver", sans-serif;
+}
+
+/*descripcion*/
+.infogeneral .detallesinfo .descripcion{
+    font-size:1.12rem;
+    max-width: 70%;
+    color:#ffff;
+    text-align: center;
+    margin:24px 0 40px;
+    margin-left: 300px;
+    margin-right: 50%;
+
+}
+
+
+.infogeneral .detallesinfo .precio1{
+    font-size:20px;
+    max-width: 70%;
+    color:#ff2929;
+    margin-left: 30%;
+}
+
+
+/*boton ordenar*/
+.infogeneral .detallesinfo .botonordenar{
+    padding: 10px 26px;
+    border: 2px solid transparent;
+    color:#1f1e1d;
+    border-radius: 30px;
+    background-color: #ff9e00;
+    font-weight: 500;
+    transition: 0.3s ease;
+    margin-left: 29%;
+}
+
+.infogeneral .detallesinfo .boton{
+    display: flex;
+    gap: 23px;
+}
+
+/*pasar el maus por el boton ordenar*/
+.infogeneral .detallesinfo .botonordenar:hover{
+    color: #ffff;
+    border-color: #ffff;
+    background: transparent;
+}
+
+/*imagen #1*/
+.infogeneral .img17{
+    zoom:190%;
+    margin-left: 55%;
+    position:absolute;
+
+}
+
+.seccioncontenido{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1300px;
+}
+
+/*diseño responsivo barra de navegacion*/
+@media screen and (max-width:900px) { 
+
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed; 
+        left: 0; 
+        top:0;
+        height: 100%; 
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0,0,0,0.2);
+    }
+
+    .barradenavegacion :where(#menu-close-button, #menu-open-button){
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .barradenavegacion #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        background: transparent;
+    }
+
+    .barradenavegacion #menu-open-button {
+        color:#ffff;
+        background: transparent;
+    }
+
+    .barradenavegacion .menudenavegacion {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top:0;
+        width:300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: #ffff;
+        transition: left 0.2s ease;
+    }
+
+    body.show-mobile-menu .barradenavegacion .menudenavegacion{
+        left:0;
+    }
+
+    .barradenavegacion .menudenavegacion .linknav{
+        color: #f41818;
+        font-size: 1.12rem;
+        display: block;
+        margin-top: 17px;
+    }
+
+    .infogeneral .img1{
+        max-width: 270px;
+        margin-right: 0;
+    }
+
+    .infogeneral .detallesinfo :is(.descripcion), .seccionacercade .detallesacercade .seccioncontacto .formadecontacto{
+        max-width: 100%;
+        margin-left: 35px;
+    }
+
+
+    .infogeneral .detallesinfo .boton{
+        justify-content: center;
+    }
+    /*acerca de*/
+    .seccionacercade .contenidoacercade{
+        gap:70px;
+        flex-direction: column-reverse;
+    }
+    .seccionacercade .img7 .acercadeimg{
+        max-width: 350px;
+        aspect-ratio: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*acerca de*/
+.seccionacercade{
+    padding: 120px 0;
+    background: #ff9e00;
+}
+
+.seccionacercade .contenidoacercade{
+    display: flex;
+    gap:50px;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff9e00;
+}
+
+.seccionacercade .img7 .acercadeimg{
+    width:400px;
+    height: 400px;
+    margin-left: 30px;
+    padding: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*titulo charcuteria canaán acerca de*/
+.contenidoacercade .detallesacercade .titulo1acercade{
+    text-align: center;
+    padding:60px 0 100px;
+    text-transform: uppercase;
+    font-size: 250%;
+}
+
+.titulo1acercade span{
+    color:#ff2929;
+}
+
+
+/*barra debajo de charcuteri canaán*/
+.titulo1acercade::after{
+    content: "";
+    width: 40%;
+    height: 5px;
+    display:block;
+    margin:10px auto 0; 
+    border-radius: 20px;
+    background: #ffff;
+}
+
+/*subtitulo acerca de nosotros*/
+.subtituloacercade{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*separacion de texto*/
+.seccionacercade .detallesacercade .subtituloacercade{
+    padding: 0;
+}
+
+.seccionacercade .detallesacercade .titulo1acercade{
+    padding: 1;
+}
+
+/*
+.seccionacercade .detallesacercade{
+    max-width: 30px;
+}*/
+
+/*texto descripcion acerca de*/
+.seccionacercade .detallesacercade .texto{
+    line-height: 30px;
+    margin: 40px 0 90px;
+    text-align: center;
+    font-size: 100;
+    margin-right: 10%;
+}
+
+/*redes sociales acerca de*/
+.seccionacercade .redesocial{
+    display: flex;
+    gap:25px;
+    margin-left: 36%;
+}
+
+.seccionacercade .redesocial .linkredsocial{
+    color:#ffff;
+    font-size: 30px;
+    transition: 0.2s ease;
+}
+
+.seccionacercade .redesocial .linkredsocial:hover{
+    color: #ff2929;
+}
+
+/*testimonios*/
+
+/*fondo testimonios*/
+.secciontestimonio{
+    padding: 50px 0 100px;
+    background: #ffff;
+}
+
+/*tamaño imagen*/
+.secciontestimonio .slider-wrapper{
+    overflow: hidden;
+    margin: 0 60px 50px;
+}
+
+.secciontestimonio .testimonio{
+    user-select: none;
+    display: flex;
+    padding: 35px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*forma de los testimonios*/
+.secciontestimonio .testimonio .usuario{
+    width: 180px;
+    height: 180px;
+    margin-bottom: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*nombre de los que dan el testimonio*/
+.secciontestimonio .testimonio .nombre{
+    margin-bottom: 16px;
+    font-size: 20px;
+    color:#ff2929;
+}
+
+/*descripcion testimonio*/
+.secciontestimonio .testimonio .descripcion{
+    line-height: 25px;
+}
+
+/*bolitas del slider*/
+.secciontestimonio .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: #ff9e00;
+}
+
+/*color de flechas*/
+.secciontestimonio .swiper-slide-button{
+    margin-top: -50px;
+    color:#ff9e00;
+    transition: 0.3s ease;
+}
+
+/*cambio de colo de flecha al pasar maus*/
+.secciontestimonio .swiper-slide-button:hover{
+    color:#ff2929;
+}
+
+/*titulo testimonio*/
+.secciontestimonio .titulotestimonio{
+    text-align: center;
+    padding:60px 0 100px;
+    text-transform: uppercase;
+    font-size: 250%;
+    color:#ff9e00;
+}
+
+/*barra debajo del titulo testimonio*/
+.titulotestimonio::after{
+    content: "";
+    width: 10%;
+    height: 10px;
+    display:block;
+    margin:10px auto 0; 
+    border-radius: 20px;
+    background: #979f92;
+}
+
+
+@media screen and (max-width:640px) {
+    .secciontestimonio .slider-wrapper{
+        margin:0 0 30px;
+    }
+    .secciontestimonio .swiper-slide-button{
+        display: none;
+    }
+}
+
+/*contacto fondo*/
+.seccioncontacto {
+    padding: 60px 0 40px;
+    background: #979f92;
+}
+
+
+/*contenido contacto*/
+.seccioncontacto .contenidocontacto{
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+    background-color: #979f92;
+    font-size: 120%;
+}
+
+
+/*lista de contacto*/
+.seccioncontacto .listainfocontacto .infocontacto {
+    display: flex;
+    gap: 20px;
+    margin: 50px 0;
+    align-items: center;
+    margin-bottom: 30%;
+}
+
+.seccioncontacto .listainfocontacto .infocontacto i{
+    font-size: 60%;
+}
+
+/*seccion nombre, correo, mensaje*/
+.seccioncontacto .formadecontacto .form-input {
+    width: 80%;
+    height: 50px;
+    padding: 0 20px;
+    outline: none;
+    margin-bottom: 16px;
+    background: #ffff;
+    border-radius: 30px;
+    border: 1px solid #ff2929;
+    margin-left: 20%;
+}
+
+.seccioncontacto .formadecontacto{
+    max-width: 50%;
+}
+
+/*cambio de color en el input al escribir*/
+.seccioncontacto .formadecontacto .form-input:focus {
+    border-color: #ff9e00;
+}
+
+.seccioncontacto .formadecontacto textarea.form-input {
+    height: 100px;
+    padding: 12px;
+    resize: vertical;
+}
+
+/*boton enviar*/
+.seccioncontacto .formadecontacto .submit{
+    padding: 10px 26px;
+    color:#1f1e1d;
+    background: #ff9e00;
+    margin-top: 10px;
+    border-radius: 20px;
+    font-size: 40;
+    font-weight: 500;
+    border: 2px solid #ff9e00;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    margin-left: 20%;
+}
+
+.seccioncontacto .formadecontacto .submit:hover{
+    background: transparent;
+    color: #ffff;
+    border-color: #ffff;
+}
+
+/*titulo contacto*/
+.seccioncontacto .titulocontacto{
+    text-align: center;
+    padding:60px 0 100px;
+    text-transform: uppercase;
+    font-size: 250%;
+    color:#242424;
+}
+
+/*barra debajo del titulo contacto*/
+.titulocontacto::after{
+    content: "";
+    width: 20%;
+    height: 10px;
+    display:block;
+    margin:10px auto 0; 
+    border-radius: 20px;
+    background: #ff9e00;
+}
+
+@media screen and (max-width:900px){
+    .seccioncontacto .contenidocontacto{
+        flex-direction:column-reverse;
+        align-items: center;
+    }
+}
+
+/*pie de pagina*/
+
+/*fondo pie de pagina*/
+.seccionpiedepagina{
+    padding: 10px 0;
+    background-color: #242424;
+}
+
+/*color de letra pie de pagina*/
+.seccionpiedepagina :where(.textcopyright, .linkredsocial, .linkpolitica ){
+    color: #ffff;
+    transition: 0.2s ease;
+}
+
+/*color de la politica*/
+.seccionpiedepagina .textopolitica .linkpolitica{
+    margin: 0 5px;
+    color:#ffff;
+}
+
+/*separacion de redes*/
+.seccionpiedepagina .linksocial{
+    display:flex;
+    gap:20px;
+
+}
+
+/*tamaño de redes sociales*/
+.seccionpiedepagina .linksocial .linkredsocial{
+    font-size: 20px;
+}
+
+.seccionpiedepagina .contenidopiedepagina .textcopyright{
+    margin: 0 5px;
+    color:#ffff;
+}
+
+
+.seccionpiedepagina .linksocial .linkredsocial:hover,
+.seccionpiedepagina .textopolitica .linkpolitica:hover,
+.seccionpiedepagina .contenidopiedepagina .textcopyright:hover{
+    color:#ff9e00;
+}
+
+/*distribucion del contenido pie de pagina*/
+.seccionpiedepagina .contenidopiedepagina{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 640px){
+    .seccionpiedepagina .contenidopiedepagina{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+

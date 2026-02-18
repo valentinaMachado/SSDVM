@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Monserrat:ital,wght@0, 100..900;1,100..900&display=swaap");
+
+
+*{
+   font-family: "Monserrat", sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+
+/*cuerpo de la pagina*/
+body{
+    background-image: url("IMG/img1.jpg.jpg");
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/*contenedor de la informacion*/
+.contenedor{
+    border: 2px solid #ff9e00;
+    width: 800px;
+    height: 700px;
+    display: flex;
+    background: #ffff;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+
+.formadelcontenedor{
+    border:2px solid #ff9e00;
+    width:100%;
+    overflow: hidden;
+}
+
+.formadelcontenedor form{
+    border:2px solid #ff9e00;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+}
+
+/*letra iniciar sesion y registrarme*/
+.formadelcontenedor h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #1f1e1d;
+    transition: 0.2s ease;
+}
+
+.formadelcontenedor h2:hover{
+    color:#ff9e00;
+}
+
+/*color del span de las letras sesion*/
+.iniciarsesion .span1{
+    color:#ff2929;
+    font-size: 100%;
+}
+
+/*color del span de las letras trarse*/
+.registrarse .span2{
+    color:#ff2929;
+    font-size: 100%;
+}
+
+
+/*redes sociales*/
+.redsocial {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+/*iconos red social*/
+.redsocial ion-icon{
+    color:#1f1e1d;
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-size: 20px;
+}
+
+
+.redsocial ion-icon:hover{
+    color: #ff9e00;
+}
+
+.formadelcontenedor span{
+    font-size: 15px;
+    margin-bottom: 15px;
+    color:#1f1e1d;
+}
+
+/*contenedor input*/
+.contenedorinput{
+    display: flex;
+    border:3px solid #ff2929;
+    margin-bottom: 20px;
+    justify-content: center;
+    padding: 0 15px;
+    border-radius: 30px;
+    gap:8px;
+    background-color: #ffff;
+    align-items: center;
+    width: 270px;
+    height: 40px;
+}
+
+/*borde del input*/
+.contenedorinput input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFF;
+}
+
+.formadelcontenedor a {
+    color:#4643ff;
+    font-size: 14px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+}
+
+.boton{
+    width:170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #ff9e00;
+    color: #1f1e1d;
+    transition:0.2s ease;
+}
+
+.boton:hover{
+    color: #ffff;
+    background-color: #979f92;
+}
+
+/*animacion*/
+
+.registrarse{
+    transform:translateX(-100%);
+}
+
+.contenedor.toggle .iniciarsesion{
+    transform: translateX(-100%);
+}
+
+.contenedor.toggle .registrarse{
+    transform: translateX(0%);
+}
+
+/*bienvenidos*/
+
+.contenedorbienvenido{
+    background-color: #ff9e00;
+    position:absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    overflow: hidden;
+    transition: transform 0.5 ease-in-out;
+}
+
+.contenedor.toggle .contenedorbienvenido{
+    transform: translateX(0);
+}
+
+
+
+.contenedorbienvenido .welcome{
+    border: 2px solid transparent;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    padding: 0 50px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.welcome-sign-in{
+    transform:translateX(100%);
+}
+
+/*bienvenidos*/
+.contenedorbienvenido h3{
+    font-size: 40px;
+    color: #0a0101;
+}
+
+/*ingrese sus datos personales*/
+.contenedorbienvenido p{
+    font-size: 20px;
+    text-align: center;
+    color: #0a0101;
+}
+
+.contenedorbienvenido .button{
+    border: none;
+    width:170px;
+    height: 45px;
+    font-size: 15px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #ffff;
+    color: #1f1e1d;
+    transition:0.2s ease;
+}
+
+.contenedorbienvenido .button:hover{
+    background-color:#ff2929;
+    color: #ffff;
+}
+
+.contenedor.toggle .welcome-sign-in{
+    transform: translateX(0);
+}
+
+.contenedor.toggle .welcome-sign-up{
+    transform: translateX(-100%);
+}
+
+/*tipo de usuario*/
+.tipusuario h3{
+    color: #1f1e1d;
+    text-align: center; 
+    padding: 3%;
+}
+
+.tipusuario select{ 
+    width: 268px;
+    height: 30px;
+    border-radius: 20px;
+    display: flex;
+    border: 3px solid #ff2929;
+    padding: 0 15px;
+    background-color: #ffff;
+    padding: 3%;
+}
+
+
+.checkbox{
+    padding: 10%;
+    margin-right: 20px;
+    font-size: 2rem;
+}
+
+/*contenedor olvido contraseña*/
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form-container .box{
+    width: 100%;
+    background-color: transparent;
+    padding:1.4rem;
+    font-size: 1.4rem;
+    color: #242424;;
+    margin:1rem 0;
+    font-size: 1.8rem;
+    border:3px solid #ff2929;
+    border-radius: 2rem;
+}
+
+.form-container form{
+    background-color: #ffff;
+    border-radius: .5rem;
+    border:#ff9e00;
+    box-shadow: #ff9e00;
+    padding:2rem;
+    text-align: center;
+    width: 50rem;
+}
+ 
+
+/*restablecer contraseña*/
+.form-container form h3{
+    font-size: 2.5rem;
+    color: #ff2929;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+
+/*color botones*/
+.btn{
+    background-color: #ff9e00;
+    color: #242424;
+}
+.btn{
+   display: block;
+   margin-top: 1rem;
+   border-radius: 2rem;
+   cursor: pointer;
+   width: 100%;
+   font-size: 1.8rem;
+   color:var(--white);
+   padding:1.2rem 3rem;
+   text-transform: capitalize;
+   text-align: center;
+}
+ 
+.btn:hover{
+    color: #ffff;
+    background-color: #979f92;
+}
+
+
+
+

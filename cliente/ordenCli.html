@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ORDENAR</title>
+   <link rel="icon" href="IMG/favicon.png" type="image/png">
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="stylepagarordenarCli.css">
+</head>
+
+<body>
+
+<header>
+
+   <nav class="barradenavegacion seccioncontenido">
+
+      <div class="logo">
+         <img src="IMG/img16.jpg.png" alt="Logo" class="img16">
+      </div>
+
+      <!-- MENU -->
+      <ul class="menudenavegacion">
+
+         <!-- BOTON CERRAR -->
+         <li>
+            <button id="menu-close-button" type="button">
+               <i class="fas fa-times"></i>
+            </button>
+         </li>
+
+         <li class="itemnav">
+            <a href="ordenCli.html" class="linknav">INICIO</a>
+         </li>
+
+         <li class="itemnav">
+            <a href="indexCli.html#seccionacercade" class="linknav">ACERCA DE</a>
+         </li>
+
+         <li class="itemnav">
+            <a href="indexCli.html#seccioncontacto" class="linknav">CONTACTO</a>
+         </li>
+
+         <li class="itemnav">
+            <a href="Iniciarsesioncli.html" class="linknav">INGRESAR</a>
+         </li>
+
+         <li class="itemnav">
+            <a href="indexCli.html#secciontestimonio" class="linknav">TESTIMONIOS</a>
+         </li>
+
+      </ul>
+
+      <!-- BOTON ABRIR -->
+      <button id="menu-open-button" type="button">
+         <i class="fas fa-bars"></i>
+      </button>
+
+   </nav>
+
+</header>
+
+
+<div class="heading">
+   <h3>ORDENAR</h3>
+   <p><a href="menuCli.php">MENÚ</a> <span> / ORDENAR</span></p>
+</div>
+
+
+<section class="orders">
+
+   <h1 class="title">ORDENAR</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+
+         <form action="ordenar.php" method="post" class="box"> 
+
+            <input type="text" name="nombre" placeholder="NOMBRE:" required>
+
+            <input type="text" name="email" placeholder="EMAIL:" required>
+
+            <input type="text" name="telefono" placeholder="TELÉFONO:" required>
+
+            <input type="text" name="direccion" placeholder="DIRECCIÓN:" required>
+
+            <button type="submit" class="btn">
+               CONFIRMAR Y PAGAR
+            </button>
+
+         </form>
+
+      </div>
+
+   </div>
+
+</section>
+
+
+
+<script src="docindexCli.js"></script>
+
+</body>
+</html>

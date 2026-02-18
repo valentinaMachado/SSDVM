@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+/*fondo del cuerpo*/
+body{
+    background-image: url(IMG/img30.jpg.png);
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+/*encabezado*/
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index:1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #1f1e1d;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+/*logo*/
+.header .logo{
+    width: 60px;
+    right: 60px;
+}
+
+/*items de la barra de navegacion*/
+.header .barradenavegacion a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: #1f1e1d;
+    background: #ff9e00;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    padding: 10px 18px;
+}
+/*al pasar el maus por la barra de navegacion*/
+.header .barradenavegacion a:hover{
+    color: #ffff;
+    background: #ff9e00;
+}
+ /*iconos de buscar, carrito de compras, menu*/
+.header .iconos div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #1f1e1d;
+    color: #ffff;
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*cambios al pasar el maus*/
+.header .iconos div:hover{
+    background: #979f92;
+    color: #ffff;
+}
+
+/*para que el menu hamburguesa no aparezca en pantalla grande*/
+#menu-btn{
+    display: none;
+}
+
+/*busqueda*/
+.header .search-form{
+    position:absolute;
+    top:110%; right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #ffff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+/*transicion para activar la barra de busqueda*/
+.header .search-form.active{
+    right: 2rem;
+    transition: .2s linear;
+}
+
+/*cambios al pasar el maus*/
+.header .search-form input{
+    height: 100%;
+    width:100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: #1f1e1d;
+    padding:0 1.5rem;
+}
+
+/*color de icono de busqueda*/
+.header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: #ff9e00;
+    cursor: pointer;
+}
+
+/*cambios al pasar el maus*/
+.header .search-form label:hover{
+    color:#ff2929;
+}
+
+
+/*caja de carrito de compras*/
+.header .shopping-cart{
+    position: absolute;
+    top:110%; right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    width: 35rem;
+    background: #ffff;
+}
+
+/*aparecer el carrito*/
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: .2s linear;
+}
+
+
+
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+    margin: 1rem 0; 
+}
+
+/*imagenes*/
+.header .shopping-cart .box img{
+    height: 10rem;
+}
+
+/*color de basurera*/
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top:50%; right: 2rem;
+    color:#ff2929;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/*cambio de color al pasar el maus*/
+.header .shopping-cart .box .fa-trash:hover{
+    color: #979f92;
+}
+
+/*color de los titulo de comida*/
+.header .shopping-cart .box .contenido h3{
+    color:#ff2929;
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+/*letra precio y cantidad*/
+.header .shopping-cart .box .contenido span{
+    color: #1f1e1d;
+    font-size: 1.6rem;
+}
+
+.header .shopping-cart .box .contenido .cantidad{
+    padding-left: 1rem;
+}
+
+/*total*/
+.header .shopping-cart .total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: #ff2929;
+}
+
+.header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+
+.principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+/*titulo menu grande*/
+.principal h3{
+    color: #ffff;
+    font-size: 5rem;
+}
+
+/*boton*/
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid #ff9e00;
+    color: #1f1e1d;
+    cursor: pointer;
+    background: #ff9e00;
+}
+
+.btn:hover{
+    background: #ff9e00;
+    color: #ffff;
+}
+
+.titulo{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: #ff9e00;
+}
+
+.titulo span{
+    background: #ffff6a;
+    color:#ff2929;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+
+/*seccion comidas rapidas*/
+.comidas .comidasslider{
+    padding: 1rem;
+}
+
+
+.comidas .comidasslider:first-child{
+    margin-bottom: 2rem;
+}
+
+/*color del contenido donde estan las comidas*/
+.comidas .comidasslider .box{
+    background: #ffff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: -1rem;
+    outline: 1rem solid rgba(0,0,0,.1);
+    box-shadow: 0 1.5rem 1rem rgba(0,0,0,.1);
+    transition: .2s linear;
+}
+
+
+.comidas .comidasslider .box:hover{
+    outline-offset: 0rem;
+    outline: 2rem solid #ff9e00;
+}
+
+
+/*imagenes*/
+.comidas .comidasslider .box img{
+    height: 20rem;
+}
+
+/*titulo de las comidas*/
+.comidas .comidasslider .box h3{
+    font-size: 2.5rem;
+    color: #ff2929;
+
+}
+
+/*precio*/
+.comidas .comidasslider .box .precio{
+    font-size: 2.5rem;
+    color: #ff2929;
+    padding: .5rem 0;
+}
+
+/*descripcion*/
+.comidas .comidasslider .box p{
+    font-size: 1rem;
+    color: #1f1e1d;
+}
+
+/*estrellas*/
+.comidas .comidasslider .box .estrellas i{
+    font-size: 1.7rem;
+    color:#ffff6a;
+    padding: .5rem 0;
+}
+
+.boton1{
+
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid #ff9e00;
+    color: #1f1e1d;
+    cursor: pointer;
+    background: #ff9e00;
+}
+ 
+
+.boton1:hover{
+    background: #ff9e00;
+    color: #ffff;
+}
+
+/*seccion bebidas*/
+.bebidas .bebidasslider{
+    padding: 1rem;
+}
+
+
+.titulo2{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: #ff9e00;
+}
+
+.titulo2 span{
+    background: #ffff6a;
+    color:#ff2929;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+
+.bebidas .bebidasslider:first-child{
+    margin-bottom: 2rem;
+}
+
+/*color del contenido donde estan las comidas*/
+.bebidas .bebidasslider .box{
+    background: #ffff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: -1rem;
+    outline: 1rem solid rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: .2s linear;
+}
+
+
+.bebidas .bebidasslider .box:hover{
+    outline-offset: 0rem;
+    outline: 2rem solid #ff9e00;
+}
+
+
+/*imagenes*/
+.bebidas .bebidasslider .box img{
+    height: 20rem;
+}
+
+/*titulo de las comidas*/
+.bebidas .bebidasslider .box h3{
+    font-size: 2.5rem;
+    color: #ff2929;
+
+}
+
+/*precio*/
+.bebidas .bebidasslider .box .precio{
+    font-size: 2.5rem;
+    color: #ff2929;
+    padding: .5rem 0;
+}
+
+/*descripcion*/
+.bebidas .bebidasslider .box p{
+    font-size: 1rem;
+    color: #1f1e1d;
+}
+
+/*estrellas*/
+.bebidas .bebidasslider .box .estrellas i{
+    font-size: 1.7rem;
+    color:#ffff6a;
+    padding: .5rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media*/
+
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+    
+}
+
+@media(max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .search-form{
+        width: 90%;
+    }
+
+    .header .barradenavegacion{
+        position: absolute;
+        top:110%;  right: -110%;
+        width: 30rem;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        background: #ffff;
+    }
+
+    .header .barradenavegacion.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+
+    .header .barradenavegacion a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+
+
+}
+
+@media(max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .titulo{
+        font-size: 2.5rem;
+    }
+
+    .titulo2{
+        font-size: 2.5rem;
+    }
+
+}
+
+#search-btn,
+.header .search-form{
+    display: none !important;
+}

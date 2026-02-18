@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIAR SESIÓN - REGISTRARSE</title>
+    <link rel="icon" href="IMG/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styleiniciosesion.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="formadelcontenedor">
+            <form class="iniciarsesion" id="iniciarsesion" action="login.php" method="post">
+             <h2>INICIAR <span class="span1">SESIÓN</span></h2>
+                <div class="redsocial">
+                    <a href="https://www.facebook.com/share/1BwMZpGCXh/" target="_blank">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </div>  
+                <span>Use su correo electrónico y contraseña</span>
+                <div class="contenedorinput">
+                    <input type="email" name="Correo" placeholder="CORREO ELECTRÓNICO">
+                </div>
+                <div class="contenedorinput">
+                    <input type="password" name="Contrasena" placeholder="CONTRASEÑA">
+                </div>
+                <a href="olvido.php">¿Olvido la contraseña?</a> 
+                <div class="tipusuario">
+                    <h3>TIPO DE USUARIO</h3>
+                    <select name="Tipo_usuario" id="TIPOUSUARIO">
+                        <option value="CLIENTE">CLIENTE</option>
+                        <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                    </select>
+               </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="validardatos" class="validardatos"/> 
+                    <label> Validar datos</label>  
+                    <br>
+                    <br>
+                    <input type="checkbox" id="terminos" class="terminos"/> 
+                    <label> Acepta términos y condiciones</label>
+                </div> 
+                <button class="boton" type="submit" id="btniniciarsesion">INICIAR SESIÓN</button>
+            </form>
+        </div>
+        <div class="formadelcontenedor">
+            <form class="registrarse" action="registro.php" method="post">
+             <h2>REGIS<span class="span2">TRARSE</span></h2>
+                <div class="redsocial">
+                    <a href="https://www.facebook.com/share/1BwMZpGCXh/" target="_blank">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </div>
+                <span>Use su correo electrónico para registrarse</span>
+                <div class="contenedorinput">
+                    <input type="text" name="Nombre" placeholder="NOMBRE">
+                </div>
+                <div class="contenedorinput">
+                    <input type="email" name="Correo" placeholder="CORREO ELECTRÓNICO">
+                </div>
+                <div class="contenedorinput">
+                    <input type="password" name="Password" placeholder="CONTRASEÑA">
+                </div>
+                <div class="tipusuario">
+                    <h3>TIPO DE USUARIO</h3>
+                    <select name="tipo_usuario" id="TIPOUSUARIO">
+                        <option value="CLIENTE">CLIENTE</option>
+                        <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                    </select>
+               </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="validardatos" class="validardatos"/> 
+                    <label> Validar datos</label>  
+                    <br>
+                    <input type="checkbox" id="terminos" class="terminos"/> 
+                    <label> Acepta términos y condiciones</label>
+                </div> 
+                <button class="boton" type="submit" id="btnregistrase">REGISTRARSE</button>
+            </form>
+        </div>
+
+
+        <div class="contenedorbienvenido">
+            <div class="welcome-sign-up welcome">
+                <h3>¡BIENVENIDOS!</h3>
+                <p>Registre sus datos personales</p>
+                <button class="button" id="btn-sign-up">REGISTRARSE</button>
+            </div>
+            <div class="welcome-sign-in welcome">
+                <h3>¡BIENVENIDOS!</h3>
+                <p>Ingrese sus datos personales</p>
+                <button class="button" id="btn-sign-in">INICIAR SESIÓN</button>
+            </div>
+        </div>
+    </div>
+   
+    <script src="dociniciarsesionCli.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
